@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jspdf": "^3.0.3",
+    "lucide-react": "^0.544.0"
+  }
+}
