@@ -1,0 +1,76 @@
+# =========================
+# Python / Django
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+*.whl
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Django
+*.sqlite3
+*.log
+local_settings.py
+media/
+
+# Static files (collected)
+staticfiles/
+static_collected/
+
+# =========================
+# Node / React
+# =========================
+node_modules/
+/.pnp
+.pnp.js
+
+# Build output
+frontend-charity/build/
+
+# Testing
+coverage/
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# =========================
+# Misc
+# =========================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+-p/
