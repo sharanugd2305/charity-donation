@@ -1,0 +1,196 @@
+/* SignupModal.css */
+
+/* Overlay */
+.signup-modal-overlay {
+    position: fixed;
+    inset: 0;
+    /* Transparent dark overlay with smooth blur */
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    padding: 1rem;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  /* Modal Card */
+  .signup-modal-content {
+    /* Soft transparent background with gentle gradient */
+    background: linear-gradient(
+      145deg,
+      rgba(234, 124, 96, 0.95),
+      rgba(255, 230, 230, 0.88)
+    );
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 1.25rem;
+    box-shadow: 0 10px 40px rgba(255, 99, 99, 0.3),
+      0 0 20px rgba(255, 255, 255, 0.1);
+    max-width: 28rem;
+    width: 100%;
+    padding: 2.25rem;
+    position: relative;
+    animation: fadeIn 0.4s ease-in-out;
+    max-height: 90vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  /* Optional soft light overlay for glow */
+  .signup-modal-content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at top left,
+      rgba(255, 255, 255, 0.25),
+      transparent 70%
+    );
+    z-index: -1;
+  }
+  
+  /* Close Button */
+  .signup-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #6b7280;
+    cursor: pointer;
+    transition: color 0.25s ease-in-out, transform 0.25s ease-in-out;
+  }
+  
+  .signup-modal-close:hover {
+    color: #ef4444;
+    transform: rotate(90deg);
+  }
+  
+  /* Title */
+  .signup-modal-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 1.75rem;
+    color: #111827;
+    text-align: center;
+  }
+  
+  /* Error Message */
+  .signup-modal-error {
+    background-color: rgba(254, 202, 202, 0.95);
+    color: #991b1b;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  /* Form Fields */
+  .signup-modal-form-group {
+    margin-bottom: 1.25rem;
+  }
+  
+  .signup-modal-label {
+    display: block;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  
+  .signup-modal-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(209, 213, 219, 0.8);
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.85);
+    transition: box-shadow 0.25s ease-in-out, border-color 0.25s ease-in-out;
+    font-size: 0.95rem;
+    color: #111827;
+  }
+  
+  .signup-modal-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #ef4444;
+    border-color: transparent;
+  }
+
+  /* Password Container */
+  .signup-modal-password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .signup-modal-password-container .signup-modal-input {
+    padding-right: 3rem;
+  }
+
+  .signup-modal-password-toggle {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    transition: color 0.2s ease-in-out;
+  }
+
+  .signup-modal-password-toggle:hover {
+    color: #ef4444;
+  }
+  
+  /* Submit Button */
+  .signup-modal-submit {
+    width: 100%;
+    background: linear-gradient(90deg, #ef4444, #f87171);
+    color: white;
+    padding: 0.85rem 1rem;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.25s ease, background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(239, 68, 68, 0.4);
+  }
+  
+  .signup-modal-submit:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(90deg, #dc2626, #ef4444);
+  }
+  
+  /* Footer */
+  .signup-modal-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #4b5563;
+    font-size: 0.95rem;
+  }
+  
+  .signup-modal-link {
+    color: #ef4444;
+    font-weight: 700;
+    transition: text-decoration 0.2s ease-in-out;
+  }
+  
+  .signup-modal-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
